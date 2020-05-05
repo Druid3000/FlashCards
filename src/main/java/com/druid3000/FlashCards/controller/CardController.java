@@ -43,6 +43,7 @@ public class CardController {
         Card card = cardService.findById(id);
 
         val cardResponseDto = CardResponseDto.builder()
+                .id(card.getId())
                 .frontSide(card.getFrontSide())
                 .backSide(card.getBackSide())
                 .backSideDescription(card.getBackSideDescription())
