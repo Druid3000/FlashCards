@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "2a90fe65-16c4-4a5c-b73f-18638f23b0e4",
+		"name": "FlashCards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"frontSide\" : \"Дом\",\n\t\"backSide\" : \"House\",\n\t\"backSideDescription\" : \"Place where people lives\",\n\t\"topic\" : \"English words\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/card/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"card",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/card/findById/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"card",
+						"findById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
