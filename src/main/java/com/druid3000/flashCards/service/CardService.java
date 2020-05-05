@@ -1,7 +1,7 @@
-package com.druid3000.FlashCards.service;
+package com.druid3000.flashCards.service;
 
-import com.druid3000.FlashCards.entity.Card;
-import com.druid3000.FlashCards.repository.CardRepository;
+import com.druid3000.flashCards.entity.Card;
+import com.druid3000.flashCards.repository.CardRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

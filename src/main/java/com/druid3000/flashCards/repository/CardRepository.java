@@ -1,6 +1,6 @@
-package com.druid3000.FlashCards.repository;
+package com.druid3000.flashCards.repository;
 
-import com.druid3000.FlashCards.entity.Card;
+import com.druid3000.flashCards.entity.Card;
 import org.springframework.data.repository.CrudRepository;
 
 public interface CardRepository extends CrudRepository<Card, Integer> {

@@ -1,9 +1,9 @@
-package com.druid3000.FlashCards.controller;
+package com.druid3000.flashCards.controller;
 
-import com.druid3000.FlashCards.dto.CardDto;
-import com.druid3000.FlashCards.dto.CardResponseDto;
-import com.druid3000.FlashCards.entity.Card;
-import com.druid3000.FlashCards.service.CardService;
+import com.druid3000.flashCards.dto.CardDto;
+import com.druid3000.flashCards.dto.CardResponseDto;
+import com.druid3000.flashCards.entity.Card;
+import com.druid3000.flashCards.service.CardService;
 import lombok.RequiredArgsConstructor;
 import lombok.val;
 import org.springframework.http.HttpStatus;

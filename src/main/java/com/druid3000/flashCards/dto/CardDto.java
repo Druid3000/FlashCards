@@ -1,4 +1,4 @@
-package com.druid3000.FlashCards.dto;
+package com.druid3000.flashCards.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

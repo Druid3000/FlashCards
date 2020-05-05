@@ -1,4 +1,4 @@
-package com.druid3000.FlashCards;
+package com.druid3000.flashCards;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
