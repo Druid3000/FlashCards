@@ -14,7 +14,7 @@ public class CardService {
     private final CardRepository cardRepository;
 
     @Transactional
-    public Card addCard(Card card){
+    public Card add(Card card){
         return cardRepository.save(card);
     }
 
@@ -22,4 +22,3 @@ public class CardService {
         return cardRepository.findById(id).orElse(new Card());
     }
 }
-
