@@ -29,6 +29,7 @@ public class CardController {
         Card card = cardService.add(newCard);
 
         val cardResponseDto = CardResponseDto.builder()
+                .id(card.getId())
                 .frontSide(card.getFrontSide())
                 .backSide(card.getBackSide())
                 .backSideDescription(card.getBackSideDescription())
