@@ -6,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.Random;
 
 @Service
 @RequiredArgsConstructor
@@ -20,7 +19,7 @@ public class CardService {
     }
 
     public Card findById(Integer id) {
-        return cardRepository.findById(id).orElse(new Card());
+        return cardRepository.findById(id).orElseThrow(() -> new RuntimeException("Card does not exist"));
     }
 
     public Card getRandomCard() {
