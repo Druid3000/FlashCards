@@ -20,7 +20,6 @@ import javax.servlet.http.HttpSession;
 @RequiredArgsConstructor
 public class LearnController {
 
-    private final LearnService learnService;
     private final CardService cardService;
 
     @GetMapping("frontSide")
