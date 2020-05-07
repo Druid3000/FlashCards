@@ -25,10 +25,7 @@ public class CardService {
 
     public Card getRandomCard() {
         long count = cardRepository.count();
-
-        Random random = new Random();
-        int randomId = random.nextInt((int) count);
-
+        int randomId = 1 + (int) (Math.random() * count);
         return findById(randomId);
     }
 }
