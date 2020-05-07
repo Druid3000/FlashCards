@@ -19,6 +19,11 @@ public class CardService {
         return cardRepository.save(card);
     }
 
+    @Transactional
+    public List<Card> addAll(List<Card> cards) {
+        return cardRepository.saveAll(cards);
+    }
+
     public Card findById(Integer id) {
         return cardRepository.findById(id).orElseThrow(() -> new RuntimeException("Card does not exist"));
     }

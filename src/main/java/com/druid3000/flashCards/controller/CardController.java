@@ -41,8 +41,14 @@ public class CardController {
         return ResponseEntity.status(HttpStatus.CREATED).body(cardResponseDto);
     }
 
+    @PostMapping("addAll")
+    public ResponseEntity<List<Card>> addAll(@RequestBody List<Card> cards) {
+        cardService.addAll(cards);
+        return ResponseEntity.status(HttpStatus.CREATED).body(cards);
+    }
+
     @GetMapping("findById/{id}")
-    public ResponseEntity<CardResponseDto> findById(@PathVariable Integer id){
+    public ResponseEntity<CardResponseDto> findById(@PathVariable Integer id) {
         Card card = cardService.findById(id);
 
         val cardResponseDto = CardResponseDto.builder()
