@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -26,5 +27,9 @@ public class CardService {
         long count = cardRepository.count();
         int randomId = 1 + (int) (Math.random() * count);
         return findById(randomId);
+    }
+
+    public List<Card> findAll() {
+        return cardRepository.findAll();
     }
 }

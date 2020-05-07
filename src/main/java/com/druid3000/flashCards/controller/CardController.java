@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/card")
 @RequiredArgsConstructor
@@ -52,5 +54,11 @@ public class CardController {
                 .build();
 
         return ResponseEntity.status(HttpStatus.OK).body(cardResponseDto);
+    }
+
+    @GetMapping("findAll")
+    public ResponseEntity<List<Card>> findAll() {
+        List<Card> cards = cardService.findAll();
+        return ResponseEntity.status(HttpStatus.OK).body(cards);
     }
 }
