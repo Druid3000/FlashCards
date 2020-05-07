@@ -36,10 +36,27 @@
 		{
 			"name": "addAll",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n\t{\r\n        \"frontSide\": \"Дом\",\r\n        \"backSide\": \"House\",\r\n        \"backSideDescription\": \"Place where people lives\",\r\n        \"topic\": \"English words\"\r\n    },\r\n    {\r\n        \"frontSide\": \"Кот\",\r\n        \"backSide\": \"Cat\",\r\n        \"backSideDescription\": \"\",\r\n        \"topic\": \"English words\"\r\n    },\r\n    {\r\n        \"frontSide\": \"Собака\",\r\n        \"backSide\": \"Dog\",\r\n        \"backSideDescription\": \"\",\r\n        \"topic\": \"English words\"\r\n    },\r\n    {\r\n        \"frontSide\": \"Медведь\",\r\n        \"backSide\": \"Bear\",\r\n        \"backSideDescription\": \"\",\r\n        \"topic\": \"English words\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": ""
+					"raw": "localhost:8080/card/addAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"card",
+						"addAll"
+					]
 				}
 			},
 			"response": []

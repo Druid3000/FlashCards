@@ -29,15 +29,19 @@ public class LearnController {
             card = cardService.getRandomCard();
             httpSession.setAttribute("card", card);
             cardDto = CardDto.builder()
+                    .id(card.getId())
                     .frontSide("hidden")
                     .backSide(card.getBackSide())
                     .backSideDescription(card.getBackSideDescription())
+                    .topic(card.getTopic())
                     .build();
         } else {
             cardDto = CardDto.builder()
+                    .id(card.getId())
                     .frontSide(card.getFrontSide())
                     .backSide(card.getBackSide())
                     .backSideDescription(card.getBackSideDescription())
+                    .topic(card.getTopic())
                     .build();
             httpSession.removeAttribute("card");
         }
