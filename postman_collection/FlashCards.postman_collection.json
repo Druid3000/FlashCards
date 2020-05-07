@@ -34,6 +34,17 @@
 			"response": []
 		},
 		{
+			"name": "addAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "findById",
 			"request": {
 				"method": "GET",
@@ -67,6 +78,25 @@
 					"path": [
 						"card",
 						"learn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/card/findAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"card",
+						"findAll"
 					]
 				}
 			},
