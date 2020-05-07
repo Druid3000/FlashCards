@@ -1,6 +1,9 @@
 package com.druid3000.flashCards.controller;
 
+import com.druid3000.flashCards.dto.CardDto;
 import com.druid3000.flashCards.dto.LearnDto;
+import com.druid3000.flashCards.entity.Card;
+import com.druid3000.flashCards.service.CardService;
 import com.druid3000.flashCards.service.LearnService;
 import lombok.RequiredArgsConstructor;
 import lombok.val;
@@ -10,19 +13,40 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpSession;
+
 @RestController
 @RequestMapping("/learn")
 @RequiredArgsConstructor
 public class LearnController {
 
     private final LearnService learnService;
+    private final CardService cardService;
 
-    @GetMapping
-    public ResponseEntity<LearnDto> learn(){
-        String text = learnService.learn();
-        val learnDto = LearnDto.builder()
-                .text(text)
-                .build();
-        return ResponseEntity.status(HttpStatus.OK).body(learnDto);
+    @GetMapping("frontSide")
+    public ResponseEntity<CardDto> learnFrontSide(HttpSession httpSession){
+        Card card = (Card) httpSession.getAttribute("card");
+
+        CardDto cardDto;
+
+        if(card == null){
+            card = cardService.getRandomCard();
+            httpSession.setAttribute("card", card);
+            cardDto = CardDto.builder()
+                    .frontSide("hidden")
+                    .backSide(card.getBackSide())
+                    .backSideDescription(card.getBackSideDescription())
+                    .build();
+        } else {
+            cardDto = CardDto.builder()
+                    .frontSide(card.getFrontSide())
+                    .backSide(card.getBackSide())
+                    .backSideDescription(card.getBackSideDescription())
+                    .build();
+            httpSession.removeAttribute("card");
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(cardDto);
     }
+
 }
