@@ -30,6 +30,6 @@ public class Card implements Serializable {
     @Column(name = "backSideDescription")
     private String backSideDescription;
 
-    @Column(name = "topic")
-    private String topic;
+    @Column(name = "example")
+    private String example;
 }

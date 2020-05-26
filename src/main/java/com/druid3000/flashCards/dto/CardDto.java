@@ -14,5 +14,5 @@ public class CardDto {
     private String frontSide;
     private String backSide;
     private String backSideDescription;
-    private String topic;
+    private String example;
 }

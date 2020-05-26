@@ -33,7 +33,7 @@ public class LearnController {
                     .frontSide("hidden")
                     .backSide(card.getBackSide())
                     .backSideDescription(card.getBackSideDescription())
-                    .topic(card.getTopic())
+                    .example(card.getExample())
                     .build();
         } else {
             cardDto = CardDto.builder()
@@ -41,7 +41,7 @@ public class LearnController {
                     .frontSide(card.getFrontSide())
                     .backSide(card.getBackSide())
                     .backSideDescription(card.getBackSideDescription())
-                    .topic(card.getTopic())
+                    .example(card.getExample())
                     .build();
             httpSession.removeAttribute("card");
         }

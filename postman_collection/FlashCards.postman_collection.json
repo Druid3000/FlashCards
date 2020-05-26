@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"frontSide\" : \"Дом\",\n\t\"backSide\" : \"House\",\n\t\"backSideDescription\" : \"Place where people lives\",\n\t\"topic\" : \"English words\"\n}",
+					"raw": "{\n\t\"frontSide\" : \"Дом\",\n\t\"backSide\" : \"House\",\n\t\"backSideDescription\" : \"Place where people lives\",\n\t\"example\" : \"I live in the house\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -40,7 +40,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "[\r\n\t{\r\n        \"frontSide\": \"Дом\",\r\n        \"backSide\": \"House\",\r\n        \"backSideDescription\": \"Place where people lives\",\r\n        \"topic\": \"English words\"\r\n    },\r\n    {\r\n        \"frontSide\": \"Кот\",\r\n        \"backSide\": \"Cat\",\r\n        \"backSideDescription\": \"\",\r\n        \"topic\": \"English words\"\r\n    },\r\n    {\r\n        \"frontSide\": \"Собака\",\r\n        \"backSide\": \"Dog\",\r\n        \"backSideDescription\": \"\",\r\n        \"topic\": \"English words\"\r\n    },\r\n    {\r\n        \"frontSide\": \"Медведь\",\r\n        \"backSide\": \"Bear\",\r\n        \"backSideDescription\": \"\",\r\n        \"topic\": \"English words\"\r\n    }\r\n]",
+					"raw": "[\r\n\t{\r\n        \"frontSide\": \"Дом\",\r\n        \"backSide\": \"House\",\r\n        \"backSideDescription\": \"Place where people lives\",\r\n        \"example\" : \"I live in the house.\"\r\n    },\r\n    {\r\n        \"frontSide\": \"Кот\",\r\n        \"backSide\": \"Cat\",\r\n        \"backSideDescription\": \"\",\r\n        \"example\" : \"I have a cat.\"\r\n    },\r\n    {\r\n        \"frontSide\": \"Собака\",\r\n        \"backSide\": \"Dog\",\r\n        \"backSideDescription\": \"\",\r\n        \"example\" : \"I have a dog.\"\r\n    },\r\n    {\r\n        \"frontSide\": \"Медведь\",\r\n        \"backSide\": \"Bear\",\r\n        \"backSideDescription\": \"\",\r\n        \"example\" : \"Bears like honkey\"\r\n    }\r\n]",
 					"options": {
 						"raw": {
 							"language": "json"

@@ -25,7 +25,7 @@ public class CardController {
                 .frontSide(cardDto.getFrontSide())
                 .backSide(cardDto.getBackSide())
                 .backSideDescription(cardDto.getBackSideDescription())
-                .topic(cardDto.getTopic())
+                .example(cardDto.getExample())
                 .build();
 
         Card card = cardService.add(newCard);
@@ -35,7 +35,7 @@ public class CardController {
                 .frontSide(card.getFrontSide())
                 .backSide(card.getBackSide())
                 .backSideDescription(card.getBackSideDescription())
-                .topic(card.getTopic())
+                .example(card.getExample())
                 .build();
 
         return ResponseEntity.status(HttpStatus.CREATED).body(cardResponseDto);
@@ -56,7 +56,7 @@ public class CardController {
                 .frontSide(card.getFrontSide())
                 .backSide(card.getBackSide())
                 .backSideDescription(card.getBackSideDescription())
-                .topic(card.getTopic())
+                .example(card.getExample())
                 .build();
 
         return ResponseEntity.status(HttpStatus.OK).body(cardResponseDto);
