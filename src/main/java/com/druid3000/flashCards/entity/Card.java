@@ -32,4 +32,8 @@ public class Card implements Serializable {
 
     @Column(name = "example")
     private String example;
+
+    @ManyToOne(optional = false, cascade = CascadeType.ALL)
+    @JoinColumn(name = "topic_id")
+    private Topic topic;
 }
